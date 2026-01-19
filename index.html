@@ -69,13 +69,14 @@
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   opacity: 0.15;
   mix-blend-mode: overlay;
-
-  #right-logo img {
+#right-logo img {
+  position: relative;
+  z-index: 2;
   max-width: 420px;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));
-  }
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.7));
+}
   #right-logo h1 {
     margin-top: 20px;
     font-size: 28px;
