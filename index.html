@@ -71,19 +71,25 @@
     }
 
     /* Sağ Kontaktira */
-    #right-contact {
-      position: absolute;
-      right: 50px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 26px;
-      color: gold; /* Kontaktira da artık gold */
-      transition: transform 0.3s, color 0.3s;
-    }
+    /* Sağ Kontaktira */
+#right-contact a {
+  color: gold;        /* varsayılan renk */
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
 
-    #right-contact a:hover {
-      transform: scale(1.1);
-    }
+/* Hover */
+#right-contact a:hover {
+  color: #ffd700;     /* hover rengi */
+  transform: scale(1.1);
+}
+
+/* Ziyaret edilmiş ve aktif linkleri de gold yap */
+#right-contact a:visited,
+#right-contact a:active {
+  color: gold;
+}
 
     /* Logo */
     #logo-area {
