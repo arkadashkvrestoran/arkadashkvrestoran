@@ -1,11 +1,9 @@
-  
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Arkadash</title>
   <style>
-    /* Sayfa ve arka plan */
     body {
       margin: 0;
       padding: 0;
@@ -14,16 +12,18 @@
       display: flex;
       height: 100vh;
       color: gold;
+      position: relative;
     }
 
     /* Sol menü */
     #left-menu {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* yukarıdan hizalı */
       padding-left: 60px;
-      gap: 30px;
-      font-size: 22px;
+      padding-top: 60px; /* üstten boşluk */
+      gap: 35px; /* menü arası boşluk biraz arttı */
+      font-size: 26px; /* yazılar biraz daha büyük */
     }
 
     #left-menu a {
@@ -32,10 +32,18 @@
       font-weight: bold;
     }
 
-    /* Sağda Kontaktira menüsü */
+    /* Sağda Kontaktira, sol menü ile yukarıdan aynı hizada */
     #contact-link {
-      margin-left: auto; /* sağa yasla */
-      margin-right: 60px;
+      position: absolute;
+      top: 60px; /* sol menü ile hizalı */
+      right: 60px;
+      font-size: 26px; /* yazı boyutu arttı */
+    }
+
+    #contact-link a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     /* Sağ logo alanı */
@@ -46,7 +54,7 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-right: 100px;
+      margin-left: 200px; /* sol menü ve Kontaktira boşluğu için */
     }
 
     /* Gri → siyah yıpranmış geçiş (gri alan genişletildi) */
@@ -54,12 +62,12 @@
       position: absolute;
       right: 0;
       top: 0;
-      width: 25%; /* gri alan %25, siyah %75 */
+      width: 25%; /* gri alan %25 */
       height: 100%;
       background:
         linear-gradient(
           to right,
-          rgba(50,50,50,0.85) 0%, /* daha koyu gri (uzay grisi) */
+          rgba(50,50,50,0.85) 0%, /* uzay grisi */
           rgba(30,30,30,0.9) 50%,
           rgba(0,0,0,1) 100%
         );
@@ -87,10 +95,10 @@
       z-index: 2;
       overflow: hidden;
       border-radius: 6px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6); /* öne çıkarır */
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
-    /* İç logo (yuvarlak) */
+    /* Logo resmi (yuvarlak) */
     .logo-box img {
       width: 85%;
       height: auto;
@@ -106,16 +114,23 @@
       #left-menu {
         flex-direction: row;
         padding-left: 20px;
+        padding-top: 20px;
         justify-content: space-around;
         width: 100%;
+        font-size: 22px;
+        gap: 20px;
       }
       #contact-link {
-        margin-left: 0;
-        margin-right: 0;
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 10px;
       }
       #right-logo {
-        padding-right: 0;
-        margin-top: 40px;
+        margin-left: 0;
+        padding-top: 40px;
       }
     }
   </style>
