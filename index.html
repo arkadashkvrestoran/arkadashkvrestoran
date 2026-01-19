@@ -71,25 +71,30 @@
     }
 
     /* Sağ Kontaktira */
-    /* Sağ Kontaktira */
-#right-contact a {
-  color: gold;        /* varsayılan renk */
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s, color 0.3s;
-}
+    #right-contact {
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 26px;
+    }
 
-/* Hover */
-#right-contact a:hover {
-  color: #ffd700;     /* hover rengi */
-  transform: scale(1.1);
-}
+    #right-contact a {
+      color: gold; /* tüm durumlarda gold */
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, color 0.3s;
+    }
 
-/* Ziyaret edilmiş ve aktif linkleri de gold yap */
-#right-contact a:visited,
-#right-contact a:active {
-  color: gold;
-}
+    #right-contact a:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+
+    #right-contact a:visited,
+    #right-contact a:active {
+      color: gold;
+    }
 
     /* Logo */
     #logo-area {
@@ -125,4 +130,50 @@
     }
 
     /* Responsive */
-    @media (max-width: 900px)
+    @media (max-width: 900px) {
+      #left-menu, #right-contact {
+        font-size: 22px;
+      }
+      #left-menu {
+        left: 20px;
+      }
+      #right-contact {
+        right: 20px;
+      }
+      .logo-box {
+        width: 240px;
+        height: 240px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Alt tabaka -->
+  <div id="background-layer"></div>
+
+  <div id="container">
+
+    <!-- Sol menü -->
+    <div id="left-menu">
+      <a href="#">Meni</a>
+      <a href="#">Wolt & Glovo</a>
+    </div>
+
+    <!-- Logo -->
+    <div id="logo-area">
+      <div class="logo-box">
+        <img src="image_31f54409-2a8f-4836-8d4b-f51c60bfa55720260119_151332.jpg" alt="Arkadash Logo">
+      </div>
+    </div>
+
+    <!-- Sağ Kontaktira -->
+    <div id="right-contact">
+      <a href="#">Kontaktira</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
