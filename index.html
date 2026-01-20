@@ -6,7 +6,6 @@
 <title>Arkadash KV</title>
 
 <style>
-/* TARAYICI BOŞLUKLARINI TAMAMEN SIFIRLA */
 html, body {
   margin: 0;
   padding: 0;
@@ -20,54 +19,58 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* ANA ALAN */
 .page {
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
-/* EN ALT: ALTIN KATMAN */
+/* EN ALT: MERMER GRİ */
+.marble-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, #4a4a4a, #5a5a5a, #3f3f3f);
+  z-index: 0;
+}
+
+/* MERMER ÜZERİNE DÖKÜLMÜŞ ALTIN */
 .gold-layer {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    #6e5200 0%,
-    #c9a227 30%,
-    #ffd700 50%,
-    #c9a227 70%,
-    #6e5200 100%
-  );
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 70% 50%,
+      rgba(255, 215, 100, 0.85) 0%,
+      rgba(200, 160, 40, 0.8) 35%,
+      rgba(120, 90, 20, 0.7) 55%,
+      rgba(0, 0, 0, 0) 70%
+    );
   z-index: 1;
 }
 
-/* ORTA: SİYAH KATMAN (BİR TIK YUKARIDA) */
+/* ORTA: SİYAH KATMAN */
 .black-layer {
   position: absolute;
-  top: 20px; /* basamak hissi */
+  top: 22px;
   left: 0;
   width: 50%;
-  height: calc(100% - 20px);
+  height: calc(100% - 22px);
   background: #000;
   z-index: 2;
 }
 
-/* EN ÜST: LOGO */
+/* LOGO – EN ÜST */
 .logo-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4; /* HER ŞEYİN ÜSTÜNDE */
+  z-index: 5;
 }
 
 .logo-box img {
   width: 290px;
-  height: auto;
   display: block;
 }
 
@@ -77,16 +80,15 @@ html, body {
   top: 50%;
   left: 60px;
   transform: translateY(-50%);
-  z-index: 3;
-  color: #d4af37;
+  z-index: 4;
   font-size: 28px;
 }
 
 .left-menu a {
   display: block;
   margin-bottom: 18px;
-  text-decoration: none;
   color: #d4af37;
+  text-decoration: none;
 }
 
 /* SAĞ KONTAKT */
@@ -95,10 +97,10 @@ html, body {
   top: 50%;
   right: 60px;
   transform: translateY(-50%);
-  z-index: 3;
-  color: #000;
+  z-index: 4;
   font-size: 28px;
   font-weight: bold;
+  color: #000;
 }
 </style>
 </head>
@@ -107,6 +109,7 @@ html, body {
 
 <div class="page">
 
+  <div class="marble-layer"></div>
   <div class="gold-layer"></div>
   <div class="black-layer"></div>
 
