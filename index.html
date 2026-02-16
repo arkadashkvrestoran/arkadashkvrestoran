@@ -42,7 +42,7 @@ body {
 }
 
 .logo img {
-    width: 280px; /* logo hafif büyük */
+    width: 280px; /* hafif büyük logo */
 }
 
 /* SOL MENÜ */
@@ -57,8 +57,15 @@ body {
 
 .left-menu div {
     color: #d4af37; /* altın */
-    font-size: 28px; /* küçülttük */
-    margin-bottom: 15px; /* biraz daha az boşluk */
+    font-size: 28px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease; /* geçiş efekti */
+    cursor: pointer;
+}
+
+.left-menu div:hover {
+    opacity: 0.7;
+    transform: translateX(5px);
 }
 
 /* SAĞ KONTAKT */
@@ -71,7 +78,14 @@ body {
 
 .right-menu div {
     color: #ffffff; /* beyaz */
-    font-size: 28px; /* küçültüldü */
+    font-size: 28px;
+    transition: all 0.3s ease; /* geçiş efekti */
+    cursor: pointer;
+}
+
+.right-menu div:hover {
+    opacity: 0.7;
+    transform: translateX(-5px);
 }
 </style>
 </head>
