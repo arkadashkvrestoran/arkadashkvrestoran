@@ -39,36 +39,65 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); /* hafif gölge */
 }
 
 .logo img {
     width: 280px;
 }
 
-/* SOL MENÜ */
+/* SOL MENÜ DROP-DOWN */
 .left-menu {
     position: absolute;
     top: 50%;
     left: 80px;
     transform: translateY(-50%);
-    display: flex;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+    opacity: 0.8;
+    text-shadow: 0 0 8px rgba(212,175,55,0.7);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background-color: rgba(0,0,0,0.7);
+    min-width: 200px;
+    z-index: 1;
     flex-direction: column;
 }
 
-.left-menu a {
-    color: #d4af37; /* altın */
-    font-size: 28px;
-    margin-bottom: 15px;
+.dropdown-content a {
+    color: #d4af37;
+    padding: 10px 20px;
     text-decoration: none;
+    display: block;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
-.left-menu a:hover {
+.dropdown-content a:hover {
     opacity: 0.8;
-    transform: translateX(5px);
-    text-shadow: 0 0 8px rgba(212,175,55,0.7); /* glow efekti */
+    text-shadow: 0 0 8px rgba(212,175,55,0.7);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
 
 /* SAĞ KONTAKT */
@@ -80,7 +109,7 @@ body {
 }
 
 .right-menu a {
-    color: #ffffff; /* beyaz */
+    color: #ffffff;
     font-size: 28px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -90,7 +119,7 @@ body {
 .right-menu a:hover {
     opacity: 0.8;
     transform: translateX(-5px);
-    text-shadow: 0 0 8px rgba(255,255,255,0.7); /* glow efekti */
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
 </style>
 </head>
@@ -99,10 +128,15 @@ body {
 
 <div class="container">
 
-    <!-- SOL -->
+    <!-- SOL MENÜ DROP-DOWN -->
     <div class="left-menu">
-        <a href="#">MENI</a>
-        <a href="#">WOLT & GLOVO</a>
+        <div class="dropdown">
+            <button class="dropbtn">WOLT & GLOVO</button>
+            <div class="dropdown-content">
+                <a href="https://wolt.com/en/srb/kraljevo/restaurant/arkadash-kebab-doner-ufte-turski-restoran" target="_blank">WOLT</a>
+                <a href="https://glovoapp.com/en/rs/kraljevo/stores/arkadash-turkish-food?content=menu-c.1868902751&section=fried-s.5302321289" target="_blank">GLOVO</a>
+            </div>
+        </div>
     </div>
 
     <!-- ORTA LOGO -->
@@ -110,9 +144,9 @@ body {
         <img src="file_0000000088fc724383a1ca891eda360e.png" alt="Logo">
     </div>
 
-    <!-- SAĞ -->
+    <!-- SAĞ KONTAKT -->
     <div class="right-menu">
-        <a href="#">KONTAKT</a>
+        <a href="tel:+381611521978">KONTAKT</a>
     </div>
 
 </div>
