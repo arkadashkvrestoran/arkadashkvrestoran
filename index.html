@@ -55,15 +55,16 @@ body {
     flex-direction: column;
 }
 
-.left-menu div {
+.left-menu a {
     color: #d4af37; /* altın */
     font-size: 28px;
     margin-bottom: 15px;
+    text-decoration: none;
     transition: all 0.3s ease; /* geçiş efekti */
     cursor: pointer;
 }
 
-.left-menu div:hover {
+.left-menu a:hover {
     opacity: 0.7;
     transform: translateX(5px);
 }
@@ -76,14 +77,15 @@ body {
     transform: translateY(-50%);
 }
 
-.right-menu div {
+.right-menu a {
     color: #ffffff; /* beyaz */
     font-size: 28px;
+    text-decoration: none;
     transition: all 0.3s ease; /* geçiş efekti */
     cursor: pointer;
 }
 
-.right-menu div:hover {
+.right-menu a:hover {
     opacity: 0.7;
     transform: translateX(-5px);
 }
@@ -96,8 +98,8 @@ body {
 
     <!-- SOL -->
     <div class="left-menu">
-        <div>MENI</div>
-        <div>WOLT & GLOVO</div>
+        <a href="#">MENI</a>
+        <a href="#">WOLT & GLOVO</a>
     </div>
 
     <!-- ORTA LOGO -->
@@ -107,7 +109,7 @@ body {
 
     <!-- SAĞ -->
     <div class="right-menu">
-        <div>KONTAKT</div>
+        <a href="#">KONTAKT</a>
     </div>
 
 </div>
